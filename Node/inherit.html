@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<body>
+    <a href="#">Hi</a> <!-- 상속 받은 HTMLAnchorElement  -->
+    <script>
+        //    element 노드 개체에 대한 참조를 얻음.
+        let nodeAnchor = document.querySelector('a');
+        // elemet 노드 개체에 대한 속성 key를 저장하기 위한 props 배열을 생성.
+        var props = [];
+        // elemet 노드 개체에 대해 루프를 돌면서 모든 속성 및 메서드를 얻어 냄.
+        for (let key in nodeAnchor) {
+            props.push(key);
+        }
+        // 속성 및 메서드를 알파벳순으로 기록.
+        console.log(props.sort());
+    </script>
+</body>
+
+</html>
