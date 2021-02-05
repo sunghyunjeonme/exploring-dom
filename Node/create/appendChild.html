@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <p>Hi</p>
+    <script>
+        // 임시 element 노드 text 노드 생성
+        var elementNode = document.createElement('strong');
+        var textNode = document.createTextNode(' Dude');
+        // 앞의 노드들을 DOM에 추가
+        document.querySelector('p').appendChild(elementNode);
+        document.querySelector('strong').appendChild(textNode);
+
+        console.log(document.body.innerHTML);
+    </script>
+</body>
+
+</html>

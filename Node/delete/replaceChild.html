@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div id="a">Hi</div>
+  <div id="b">Dude</div>
+  <script>
+    //  요소 노드 바꾸기
+    let divA = document.getElementById('a');
+    let newSpan = document.createElement('span');
+    newSpan.textContent = 'Howdy';
+    divA.parentNode.replaceChild(newSpan, divA);
+    // 텍스트 노드 바꾸기
+    let divB = document.getElementById('b').firstChild
+    newText = document.createTextNode('안녕하세요');
+    divB.parentNode.replaceChild(newText, divB);
+
+    console.log(document.body.innerHTML);
+  </script>
+</body>
+
+</html>

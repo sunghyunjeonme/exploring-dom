@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div id="a">Hi</div>
+  <div id="b">Dude</div>
+  <script>
+    // element 노드 삭제
+    var divA = document.getElementById('a');
+    divA.parentNode.removeChild(divA);
+
+    // text 노드 삭제
+    var divB = document.getElementById('b').firstChild
+    divB.parentNode.removeChild(divB);
+
+    // 새롭게 갱신된 DOM을 출력 (빈 div#B만 남아있어야 한다.)
+    console.log(document.body.innerHTML)
+  </script>
+
+</body>
+
+</html>

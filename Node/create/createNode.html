@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<body>
+    <script>
+        var elementNode = document.createElement('div');
+        console.dir(elementNode, elementNode.nodeType);  // <div> 1을 출력하며, 1은 Element 노드를 가르킨다.
+
+        var textNode = document.createTextNode('안녕하세요.');
+        console.dir(textNode, textNode.nodeType); // "안녕하세요." 3을 출력하며, 3은 Text 노드를 가르킨다.
+    </script>
+</body>
+
+</html>
