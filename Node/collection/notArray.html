@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <a href="#"></a>
+  <script>
+    console.log(Array.isArray(document.links));  // HTMLCollection이지 Array가 아니므로 false 반환
+    console.log(Array.isArray(document.querySelectorAll('a'))); // NodeList이지 Array가 아니므로 false 반환
+  </script>
+</body>
+
+</html>

@@ -175,3 +175,51 @@ divA.parentNode.replaceChild(newSpan, divA);
 
 - innerHTML은 요소 안의 tag가 교체되는 것이고
 - appendChild ()는 요소 안의 tag를 그대로 두고 맨 뒤에 추가되는 것이다.
+
+## HTMLCollection과 NodeList (유사 배열)
+
+HTMLCollection과 NodeList는 유사 배열이라는 공통점을 갖고 있는 반면에 차이점도 존재한다.
+
+- HTMLCollection
+  - document.scripts
+  - document.body.children
+  - docment.getElementsByTagName
+  - document.getElementsByClassName
+
+위의 메서드를 사용하면 HTMLCollection을 return한다.
+
+- NodeList
+  - document.querySelectorAll
+  - element.childNodes
+
+위의 메서드를 사용하면 NodeList를 return한다. (노드의 모음)
+
+- forEach 메서드를 지원한다. (브라우저의 지원 여부 확인해야 함)
+  - [Why doesn`t nodelist have forEach ?](https://stackoverflow.com/questions/13433799/why-doesnt-nodelist-have-foreach/39133264#39133264)
+
+## DOM 내의 노드 탐색
+
+- parentNode
+- firstChild
+- lastChild
+- nextSibling
+
+위의 프로퍼티를 사용해서 DOM을 탐색하게 되면 Text 노드, Comment 노드 등이 관계에 포함되기 때문에 요소 탐색에 어려움을 겪는다.
+
+- firstElementChild
+- lastElementChild
+- nextElementSibling
+- previousElementSibling
+- children
+- parentElement
+
+다음과 같은 프로퍼티를 사용하면 Element 노드만 탐색할 수 있다.
+
+# 2. Document 노드
+
+HTMLDocument 생성자(document로부터 상속)는 DOM 내에 DOUCUMENT_NODE(에:window.document)를 생석한다.
+
+```js
+console.log(document.constructor); // HTMLDocument
+console.log(document.nodeType); // 9
+```

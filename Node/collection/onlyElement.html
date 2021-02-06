@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <ul>
+    <!-- comment -->
+    <li id="A">foo</li>
+    <li id="B">bar</li>
+    <!-- comment -->
+  </ul>
+  <script>
+    // ul 선택해서 저장
+    let ul = document.querySelector('ul');
+    // ul의 첫 번째 자식은?
+    console.log(ul.firstElementChild.nodeName);
+    // ul의 마지막 자식은?
+    console.log(ul.lastElementChild.nodeName);
+    // 첫 번째 li의 nextSibling은?
+    console.log(ul.querySelector('#A').nextElementSibling.nodeName);
+    // 마지막 li의 previousSibling은?
+    console.log(ul.querySelector('#B').previousElementSibling.nodeName);
+    // 첫 번째 li의 element는?
+    console.log(ul.firstElementChild.parentElement);
+  </script>
+</body>
+
+</html>
